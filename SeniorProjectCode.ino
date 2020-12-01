@@ -62,7 +62,7 @@ void loop() {
     //calculates an average distance over the last set of samples
     DistanceArray[0] = distance;
     sum=distance;
-    for(i=1; i<10; i++) {
+    for(i=1; i<=10; i++) {
       DistanceArray[i]=DistanceArray[i-1];
       sum+=DistanceArray[i];
     }
