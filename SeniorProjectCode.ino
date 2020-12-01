@@ -17,9 +17,6 @@ void setup() {
   pinMode(RecieverInputPin, INPUT);
   pinMode(ledPin, OUTPUT);
 
-}
-
-void loop() {
   long int starttime;
   long int stoptime;
   long int signaltime;
@@ -30,6 +27,9 @@ void loop() {
   float AverageDistance;
   int NoSignal;
 
+}
+
+void loop() {
 
     //takes a starting time
     starttime=micros();
