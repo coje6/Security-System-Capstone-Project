@@ -1,6 +1,7 @@
 #define RecieverInputPin 13
 #define PWMOutputPin 9
 #define ledPin 14
+
 #define SpeedOfSound 11000
 #define LEDon 1
 #define LEDoff 0
@@ -8,24 +9,26 @@
 //sets the definiton of a signal recieved to be one or zero
 #define InputSignalPolarity 1
 //sets the distance the the program is looking for
-#define DesiredDistance 5
+#define DesiredDistance 11
 //sets the tolerance of the distance being looked for
-#define ToleranceDistance 0.5
+#define ToleranceDistance 1
+
+long int starttime;
+long int stoptime;
+long int signaltime;
+float seconds;
+float distance;
+float DistanceArray[10];
+float sum;
+float AverageDistance;
+int NoSignal;
+int i;
 
 void setup() {
   
   pinMode(RecieverInputPin, INPUT);
+  digitalWrite(ledPin, LOW);
   pinMode(ledPin, OUTPUT);
-
-  long int starttime;
-  long int stoptime;
-  long int signaltime;
-  float seconds;
-  float distance;
-  float DistanceArray[10];
-  float sum;
-  float AverageDistance;
-  int NoSignal;
 
 }
 
@@ -78,7 +81,7 @@ void loop() {
     
     //waits 5 milliseconds between samples, allows the residual noise from the first
     //pulse to die out
-    delay(5)
+    delay(5);
     
 
 }
