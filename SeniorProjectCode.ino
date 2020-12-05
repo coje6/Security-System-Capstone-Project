@@ -62,13 +62,18 @@ void loop() {
       distance = 1000;
     }
 
-    //calculates an average distance over the last set of samples
+    //stores most recent ten distances in an array, most recent being at index 0
+    for(i=0; i<9; i++) {
+      DistanceArray[i+1]=DistanceArray[i];
+    }
     DistanceArray[0] = distance;
-    sum=distance;
-    for(i=1; i<=10; i++) {
-      DistanceArray[i]=DistanceArray[i-1];
+
+    //calculates the sum of the distance array
+    for(i=0;i<10; i++) {
       sum+=DistanceArray[i];
     }
+
+    //calculates the average distance
     AverageDistance = sum/10;
 
     //checks if the averaged distance is outof range of the tolerance distance
