@@ -7,7 +7,7 @@
 #define LEDoff 0
 
 //sets the definiton of a signal recieved to be one or zero
-#define InputSignalPolarity 1
+#define InputSignalPolarity 0
 //sets the distance the the program is looking for
 #define DesiredDistance 11
 //sets the tolerance of the distance being looked for
@@ -87,6 +87,9 @@ void loop() {
     //waits 5 milliseconds between samples, allows the residual noise from the first
     //pulse to die out
     delay(5);
+  
+    //resets the NoSignal value
+    NoSignal=0;
     
 
 }
