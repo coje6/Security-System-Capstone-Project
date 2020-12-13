@@ -14,9 +14,9 @@ void loop() {
   //the ultrasonic reciever pulse train returning
 
   if(digitalRead(PulseTrainInput)==1) {
-    delay(1);
-    digitalWrite(OutputPin, 1);
     delay(2);
+    digitalWrite(OutputPin, 1);
+    delay(1);
     digitalWrite(OutputPin, 0);
     delay(1);
     }
