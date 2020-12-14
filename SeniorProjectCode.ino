@@ -88,8 +88,8 @@ void loop() {
     //pulse to die out
     delay(5);
   
-    //resets the NoSignal value
+    //resets the NoSignal and sum values
     NoSignal=0;
-    
+    sum=0;
 
 }
