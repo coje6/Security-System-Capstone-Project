@@ -2,7 +2,7 @@
 #define PWMOutputPin 9
 #define ledPin 14
 
-#define SpeedOfSound 11000
+#define SpeedOfSound 1125
 #define LEDon 1
 #define LEDoff 0
 
